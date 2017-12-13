@@ -3,7 +3,6 @@ before_action :find_post, only: [:show, :edit, :destroy, :update]
 before_action :authenticate_user!, only: [:new, :edit, :destroy]
 before_action :is_owner, only: [:edit, :destroy]
    def index
-     @trumps = Trump.all.order("created_at DESC")
    end
 
    def show
